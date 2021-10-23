@@ -1,4 +1,4 @@
-<h1>macOS Catalina/Big Sur on Dell Vostro 3000 series using OpenCore</h1>
+<h1>macOS Big Sur on Dell Vostro 3648 series using OpenCore 0.7.4</h1>
 
 ![dzfgv](https://user-images.githubusercontent.com/37314164/127522651-94c034cb-848d-43b6-9519-7aca059e20c0.png)
 ![Captura de Pantalla 2021-07-29 a la(s) 11 12 00 a  m](https://user-images.githubusercontent.com/37314164/127522694-d163089f-451b-4621-840c-5d62fa7ee522.png)
@@ -15,10 +15,6 @@ You **must** add your own serialnumber. I recommend [GenSMBIOS](https://github.c
 
 Use this a a starting point, this is no replacement of your own research, trial and error.
 
-Remove kexts asociated with BCM94352Z(DW1560) if you do not have installed one, and do a OCSnapshot in ProperTree to remove them from config.plist.
-
-**Important:** You MUST remove the wifi card from the motherboard, fail to do so will result in bizarre kernel panics during installation, after that you can reinstall again the card.
-
 ## What is working
 
 ### Completely supported
@@ -33,10 +29,7 @@ XCPM power management is native supported. HWP is fully enabled as well. Added c
 
 #### Wi-Fi & Bluetooth
 
-This laptop comes with an Intel WiFi + Bluetooth combo so I replaced mine with BCM94352Z (DM1560). 
-Airport, Handoff are working correctly.
-
-###### Important: If you have an Intel card, remove BCM-related kexts, rescan with ProperTree and start from there.
+This laptop comes with an Intel WiFi + Bluetooth combo. And works fine
 
 #### Camera
 
@@ -72,7 +65,7 @@ Functioning with multigestures.
 
 #### Keyboard
 
-Brightness keys not working. Also strange behavior sometimes after waking up, see Sleep.
+Brightness keys wrongly mapped. Use FN + S for decrease brightness and FN + B for increase brightness
 
 #### Sleep and Wake
 
@@ -110,7 +103,7 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
     </tr>
     <tr>
       <td>Processor type</td>
-      <td>Intel Core i5-7200U</td>
+      <td>Intel Core i3-7100U</td>
     </tr>
      <tr>
       <td>VGA</td>
@@ -134,62 +127,6 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
 
 ## Changelog
 
-##### 08/sep/2021:
+##### 23/oct/2021:
 
-Updated to OpenCore 0.7.2
-
-Replaced ACPI files with my own compiled for my specific config. 
-
-Framebuffer: Added missing entries and removed unused patches.
-
-Added CPUfriend, now CPU goes below 1300MHz, this should improve battery life.
-
-##### 06/sep/2021:
-
-Now trackpad works using VoodooI2C, with a lot better experience using touchpad
-
-Updated to OpenCore 0.7.2
-
-Now completely cosmetic, no verbose or debug messages.
-
-OCvalidator shows no errors anymore.
-
-Switch from ugly XOSI to GPI0 for trackpad. 
-
-##### 06/jul/2021:
-
-Updated to OpenCore 0.7.1
-
-Kexts updated
-
-##### 08/jun/2021:
-
-Updated to OpenCore 0.7.0
-
-Kexts updated
-
-Audio headphone jack fixed!  Problem was incorrect layout-id (correct is `layout-id` = `21`)
-
-##### 23/mar/2021:
-
-Updated to OpenCore 0.6.7
-
-Added and updated a ton of kexts.
-
-Big Sur now working (yay)!
-
-Audio now works via `DeviceProperties` -> `Add` -> `PciRoot(0x0)/Pci(0x1F,0x3)`
-
-##### 26/nov/2020: 
-
-Removed: `XHCI-unsupported.kext`because is not needed
-
-Added: `SMCDellSensors.kext`, `SMCProcessor.kext`, `SMCSuperIO.kext`for CPU and fan sensor support
-
-Fixed: Wrong iGPU in `DeviceProperties`
-
-Updated: Sleep and Wake findings
-
-##### 25/nov/2020: 
-
-First release
+First Release
