@@ -1,13 +1,13 @@
-<h1>macOS Big Sur on Dell Vostro 3648 series using OpenCore 0.7.4</h1>
+<h1>macOS Monterey on Dell Vostro 5468 using OpenCore 0.7.5</h1>
 
-![dzfgv](https://user-images.githubusercontent.com/37314164/127522651-94c034cb-848d-43b6-9519-7aca059e20c0.png)
-![Captura de Pantalla 2021-07-29 a la(s) 11 12 00 a  m](https://user-images.githubusercontent.com/37314164/127522694-d163089f-451b-4621-840c-5d62fa7ee522.png)
+![Desktop Screenshot](https://user-images.githubusercontent.com/40514988/140243848-203fd15b-d141-4fe2-b095-3bc763569299.png)
 
+![About Mac](https://user-images.githubusercontent.com/40514988/140243924-a3c20205-5b3c-4d5d-ba78-bdca13c55cdc.png)
 
 
 ## Important
 
-This repo has a lot of things specific to my laptop, for example all the ACPI tables. It should work in a identic computer, but maybe it won't.
+This repo has a lot of things specific to my laptop, for example all the ACPI tables. It should work in a identic laptop, but maybe it won't.
 
 ## Instructions
 
@@ -19,17 +19,13 @@ Use this a a starting point, this is no replacement of your own research, trial 
 
 ### Completely supported
 
-#### Audio
-
-Audio on speakers and headphones works as intended.
-
 #### CPU
 
-XCPM power management is native supported. HWP is fully enabled as well. Added cpufriend for more energy savings.
+XCPM power management is native supported. HWP is fully enabled as well.
 
 #### Wi-Fi & Bluetooth
 
-This laptop comes with an Intel WiFi + Bluetooth combo. And works fine
+This laptop comes with an Intel WiFi + Bluetooth combo.
 
 #### Camera
 
@@ -63,6 +59,10 @@ Functioning with multigestures.
 
 ### Partially working
 
+#### Audio
+
+Audio on speakers and headphones sometimes bugged after sleep with charger disconnected.
+
 #### Keyboard
 
 Brightness keys wrongly mapped. Use FN + S for decrease brightness and FN + B for increase brightness
@@ -73,7 +73,7 @@ Sometimes weird behavior happens. Example, if a key if pressed when the laptop i
 
 A workaround i've found is when the laptop wakes from sleep, do not press any key inmediately. Wait 5-10 seconds then start typing, that works for me, but sometimes the touchpad just quits anyway.
 
-### Not working
+### Not Tested
 
 #### Others
 
@@ -82,9 +82,11 @@ Internal SD card Reader
 
 ## Additional info, quirks, findings, etc 
 
-`CtlnaAHCIPort` is absolutely necesary to Big Sur. Using `MinKernel` this kext only loads in BirSur 
+`CtlnaAHCIPort` is absolutely necesary to Big Sur. Using `MinKernel` this kext only loads in Big Sur and above
 
-AirPortBrcm4360 only will load in Catalina (using `MaxKernel` = `19.9.9`). This kext makes Big Sur unable to boot.
+`IntelBluetoothInjector.kext` only load below Big Sur (using `MaxKernel` = `20.99.9`). This kext makes Monterey unable to boot.
+
+Use `BlueToolFixup` from `BrcmPatchRAM` for bluetooth fix in Monterey
 
 When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kext` from `VoodooPS2Controller.kext/Contents/PlugIns/`.
 
@@ -99,7 +101,7 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
   <tbody>
     <tr>
       <td>Model</td>
-      <td>Dell Vostro 3468</td>
+      <td>Dell Vostro 5468</td>
     </tr>
     <tr>
       <td>Processor type</td>
@@ -119,13 +121,21 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
 </table>
 
 
-![Captura de Pantalla 2021-07-29 a la(s) 11 16 00 a  m](https://user-images.githubusercontent.com/37314164/127522685-8d8b5791-a97b-41ec-ba6d-51e70ba82f12.png)
+![Hackintool](https://user-images.githubusercontent.com/40514988/140244023-b2f295e1-6db5-469a-9e91-558ca13fbc3d.png)
 
-![Captura de Pantalla 2021-07-29 a la(s) 11 17 04 a  m](https://user-images.githubusercontent.com/37314164/127522701-539e44bc-73d7-4426-a8cf-9eee6fdcd7f6.png)
+![Installed Kext](https://user-images.githubusercontent.com/40514988/140244055-ed115da1-59e5-496b-a7d6-b0d68b4d5e85.png)
 
-![Captura de Pantalla 2021-07-29 a la(s) 11 16 35 a  m](https://user-images.githubusercontent.com/37314164/127522708-c5c77309-7c38-400f-8c13-59466aade2e3.png)
+![PCIE List](https://user-images.githubusercontent.com/40514988/140244075-083bdb38-7551-43f1-82e7-59eb66f76fe3.png)
 
 ## Changelog
+
+##### 04/nov/2021:
+
+Update to OpenCore 0.7.5
+
+Update to Monterey
+
+Added SSDT-HPET.aml for fixing irq conflicts
 
 ##### 23/oct/2021:
 
