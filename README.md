@@ -57,15 +57,15 @@ Fan Speed, CPU temp and voltage.
 
 Functioning with multigestures.
 
-### Partially working
+#### Keyboard
+
+Brightness keys works perfectly
+
+### Need more testing
 
 #### Audio
 
-Audio on speakers and headphones sometimes bugged after sleep with charger disconnected.
-
-#### Keyboard
-
-Brightness keys wrongly mapped. Use FN + S for decrease brightness and FN + B for increase brightness
+Audio on speakers and headphones.
 
 #### Sleep and Wake
 
@@ -128,6 +128,16 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
 ![PCIE List](https://user-images.githubusercontent.com/40514988/140244075-083bdb38-7551-43f1-82e7-59eb66f76fe3.png)
 
 ## Changelog
+
+##### 13/nov/2021:
+
+Fixed brightness key
+
+Added cpufriend
+
+Change graphics AAPL,ig-platform-id (Better performance)
+
+And more
 
 ##### 04/nov/2021:
 
