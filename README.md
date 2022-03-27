@@ -1,9 +1,8 @@
 <h1>macOS BigSur 11.6.5 on Dell Vostro 5468 using OpenCore 0.7.9</h1>
 
-![Desktop Screenshot](https://user-images.githubusercontent.com/40514988/148590344-9d919ee1-88ad-4f2e-a4e0-598b5f5c821e.png)
+![Desktop Screenshot](https://user-images.githubusercontent.com/40514988/160290833-608446a7-e877-44b6-8962-a2cb6e2bc800.png)
 
-![About Mac](https://user-images.githubusercontent.com/40514988/148592751-1295af57-d02b-46d0-a0de-67f79798b784.png)
-
+![About Mac](https://user-images.githubusercontent.com/40514988/160290864-8ed379cf-7280-457b-b3dc-aad7e2d02551.png)
 
 <h2>Laptop Specs</h2>
 <table>
@@ -211,11 +210,13 @@ Internal SD card Reader
 When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kext` from `VoodooPS2Controller.kext/Contents/PlugIns/`.
 
 
-![Hackintool](https://user-images.githubusercontent.com/40514988/148591123-c8fc0f44-cf25-4a24-bdd7-36da01737806.png)
+![Hackintool](https://user-images.githubusercontent.com/40514988/160291073-3481992e-2fe9-44e2-905c-bd1f686a1b71.png)
 
-![Installed Kext](https://user-images.githubusercontent.com/40514988/148591199-df389bb6-5755-469a-a0aa-79f6933caa12.png)
+![Installed Kext](https://user-images.githubusercontent.com/40514988/160291095-eda22da2-d7a6-4e32-9550-875be80c847d.png)
 
-![PCIe](https://user-images.githubusercontent.com/40514988/148591266-22d13fcd-c0f2-48c5-ae39-b8bc0120aa2f.png)
+![USB Mapping](https://user-images.githubusercontent.com/40514988/160291105-51e1f313-d1d3-429d-889d-20fd7098dd54.png)
+
+![PCIE](https://user-images.githubusercontent.com/40514988/160291118-ef15a92c-05f9-4d1f-988d-681aa49e8ddb.png)
 
 ## Changelog
 
