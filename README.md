@@ -1,4 +1,4 @@
-<h1>macOS Monterey 12.1 on Dell Vostro 5468 using OpenCore 0.7.6</h1>
+<h1>macOS BigSur 11.6.5 on Dell Vostro 5468 using OpenCore 0.7.9</h1>
 
 ![Desktop Screenshot](https://user-images.githubusercontent.com/40514988/148590344-9d919ee1-88ad-4f2e-a4e0-598b5f5c821e.png)
 
@@ -24,7 +24,7 @@
     </tr>
     <tr>
       <td>RAM</td>
-      <td>8+4 Dual Channel DDR4 2133 MHz</td>
+      <td>8+8 Dual Channel DDR4 2133 MHz</td>
     </tr>
     <tr>
       <td>Storage</td>
@@ -60,7 +60,7 @@
   <tbody>
     <tr>
       <td>AppleALC</td>
-      <td>1.6.7</td>
+      <td>1.7.0</td>
     </tr>
     <tr>
       <td>BrightnessKeys</td>
@@ -72,11 +72,11 @@
     </tr>
     <tr>
       <td>IntelBluetoothFirmware</td>
-      <td>2.0.1</td>
+      <td>2.1.0</td>
     </tr>
      <tr>
       <td>Lilu</td>
-      <td>1.5.8</td>
+      <td>1.6.0</td>
     </tr>
     <tr>
       <td>RealtekRTL8111</td>
@@ -84,23 +84,23 @@
     </tr>
     <tr>
       <td>RestrictEvents</td>
-      <td>1.0.5</td>
+      <td>1.0.7</td>
     </tr>
     <tr>
       <td>VirtualSMC</td>
-      <td>1.2.8</td>
+      <td>1.2.9</td>
     </tr>
     <tr>
       <td>VoodooI2C</td>
-      <td>2.6.5</td>
+      <td>2.7</td>
     </tr>
     <tr>
       <td>VoodooPS2Controller</td>
-      <td>2.2.7</td>
+      <td>2.2.8</td>
     </tr>
     <tr>
       <td>WhateverGreen</td>
-      <td>1.5.5</td>
+      <td>1.5.8</td>
     </tr>
     <tr>
       <td>Others</td>
@@ -124,17 +124,12 @@
       <td>Yes</td>
       <td>-</td>
     </tr>
-    <tr>
-      <td>TPM</td>
-      <td>Off</td>
-      <td>Causing stuck on apple logo</td>
-    </tr>
   </tbody>
 </table>
 
 ## Important
 
-This repo has a lot of things specific to my laptop, for example all the ACPI tables. It should work in a identic laptop, but maybe it won't.
+This repo has a lot of things specific to my laptop, for example all the ACPI tables. It should work in a identic laptop, but maybe it won't. You can also run monterey, but for some reaseon i'll stick to bigsur for better experience
 
 ## Instructions
 
@@ -166,7 +161,7 @@ Camera is functioning normally.
 
 USB ports are working as expected.
 
-Use USBInject-All.kext then with Hackintool disable all unused ports and generate a USBPorts.kext
+Use USBInject-All.kext then with Hackintool disable all unused ports and generate a SSDT-UIAC.aml and SSDT-USBX.aml
 
 #### Ethernet
 
@@ -203,13 +198,13 @@ Internal SD card Reader
 
 ## Additional info, quirks, findings, etc 
 
-`CtlnaAHCIPort` is absolutely necesary to Big Sur.
+`CtlnaAHCIPort` is absolutely necesary to Big Sur+.
 
-`IntelBluetoothInjector.kext` only load in Big Sur and below. Set `MaxKernel` to `20.99.9` for booting in monterey.
+`IntelBluetoothInjector.kext` only load in Big Sur and below. Set `MaxKernel` to `20.99.9` for booting in monterey or just remove it if you only use monterey.
 
 `BlueToolFixup` from `BrcmPatchRAM` needed for bluetooth fix in Monterey
 
-`Heliport Client` is needed for wifi client (I use this because multiple OSes)
+`Airportitlwm` needed to updated for monterey if you want to
 
 `Combojack` also needed for fix audio distortion after sleep with unplugged charger, (run install.sh)
 
@@ -223,6 +218,13 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
 ![PCIe](https://user-images.githubusercontent.com/40514988/148591266-22d13fcd-c0f2-48c5-ae39-b8bc0120aa2f.png)
 
 ## Changelog
+
+##### 27/mar/2022
+Updated and Rebuild config to OpenCore 0.7.9
+
+Updated kext
+
+Updated ssdt
 
 ##### 08/jan/2022:
 
