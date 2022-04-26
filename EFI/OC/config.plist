@@ -40,22 +40,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-PM.aml</string>
-				<key>Path</key>
-				<string>SSDT-PM.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-PMC.aml</string>
-				<key>Path</key>
-				<string>SSDT-PMC.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>SSDT-PNLF.aml</string>
 				<key>Path</key>
 				<string>SSDT-PNLF.aml</string>
@@ -67,14 +51,6 @@
 				<string>SSDT-UIAC.aml</string>
 				<key>Path</key>
 				<string>SSDT-UIAC.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-UPRW.aml</string>
-				<key>Path</key>
-				<string>SSDT-UPRW.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -284,36 +260,6 @@
 				<key>TableSignature</key>
 				<data></data>
 			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
-				<string>change Method(UPRW,2,N) to XPRW, pair with SSDT-UPRW.aml</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>VVBSVwpwEg==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>WFBSVwpwEg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
 		</array>
 		<key>Quirks</key>
 		<dict>
@@ -472,6 +418,24 @@
 				<string>Any</string>
 				<key>BundlePath</key>
 				<string>AirportItlwm.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>CPUFriendDataProvider.kext</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>CPUFriendDataProvider.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -850,6 +814,24 @@
 				<string>Any</string>
 				<key>BundlePath</key>
 				<string>BrightnessKeys.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>CPUFriend.kext</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/CPUFriend</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>CPUFriend.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -1621,7 +1603,7 @@
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
-			<data>AAAAAAAA</data>
+			<data>qqqqqqqq</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
