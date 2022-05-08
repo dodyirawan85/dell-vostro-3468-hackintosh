@@ -58,8 +58,12 @@
   </thead>
   <tbody>
     <tr>
+      <td>Airportitlwm</td>
+      <td>2.2.0 - Alpha</td>
+    </tr>
+    <tr>
       <td>AppleALC</td>
-      <td>1.7.0</td>
+      <td>1.7.1</td>
     </tr>
     <tr>
       <td>BrightnessKeys</td>
@@ -219,6 +223,11 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
 ![PCIE](https://user-images.githubusercontent.com/40514988/160291118-ef15a92c-05f9-4d1f-988d-681aa49e8ddb.png)
 
 ## Changelog
+
+##### 08/may/2022
+Updated Airportitlwm to v2.2.0 - Alpha for fixing random kernel panics
+
+Updated AppleALC to 1.7.1
 
 ##### 27/mar/2022
 Updated and Rebuild config to OpenCore 0.7.9
