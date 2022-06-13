@@ -1,4 +1,4 @@
-<h1>macOS BigSur 11.6.5 on Dell Vostro 5468 using OpenCore 0.7.9</h1>
+<h1>macOS Monterey 12.4 on Dell Vostro 5468 using OpenCore 0.8.1</h1>
 
 ![Desktop Screenshot](https://user-images.githubusercontent.com/40514988/160290833-608446a7-e877-44b6-8962-a2cb6e2bc800.png)
 
@@ -63,11 +63,11 @@
     </tr>
     <tr>
       <td>AppleALC</td>
-      <td>1.7.1</td>
+      <td>1.7.2</td>
     </tr>
     <tr>
       <td>BrightnessKeys</td>
-      <td>1.0.2</td>
+      <td>1.0.3</td>
     </tr>
     <tr>
       <td>ECEnabler</td>
@@ -86,10 +86,6 @@
       <td>2.4.2</td>
     </tr>
     <tr>
-      <td>RestrictEvents</td>
-      <td>1.0.7</td>
-    </tr>
-    <tr>
       <td>VirtualSMC</td>
       <td>1.2.9</td>
     </tr>
@@ -103,7 +99,7 @@
     </tr>
     <tr>
       <td>WhateverGreen</td>
-      <td>1.5.8</td>
+      <td>1.5.9</td>
     </tr>
     <tr>
       <td>Others</td>
@@ -201,13 +197,9 @@ Internal SD card Reader
 
 ## Additional info, quirks, findings, etc 
 
-`CtlnaAHCIPort` is absolutely necesary to Big Sur+.
-
-`IntelBluetoothInjector.kext` only load in Big Sur and below. Set `MaxKernel` to `20.99.9` for booting in monterey or just remove it if you only use monterey.
+`Airportitlwm` needed to updated for monterey if you want to
 
 `BlueToolFixup` from `BrcmPatchRAM` needed for bluetooth fix in Monterey
-
-`Airportitlwm` needed to updated for monterey if you want to
 
 `Combojack` also needed for fix audio distortion after sleep with unplugged charger, (run install.sh)
 
@@ -223,6 +215,13 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
 ![PCIE](https://user-images.githubusercontent.com/40514988/160291118-ef15a92c-05f9-4d1f-988d-681aa49e8ddb.png)
 
 ## Changelog
+
+##### 08/may/2022
+Updated and Rebuild config to OpenCore 0.8.1
+
+Updated And Cleanup Some Kext
+
+Disabled ShowPicker and Cleanup Resources
 
 ##### 08/may/2022
 Updated Airportitlwm to v2.2.0 - Alpha for fixing random kernel panics
