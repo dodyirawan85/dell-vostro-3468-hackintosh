@@ -1,8 +1,8 @@
 <h1>macOS Monterey 12.4 on Dell Vostro 5468 using OpenCore 0.8.1</h1>
 
-![Desktop Screenshot](https://user-images.githubusercontent.com/40514988/160290833-608446a7-e877-44b6-8962-a2cb6e2bc800.png)
+![Desktop Screenshot](https://user-images.githubusercontent.com/40514988/173263923-46426c7f-9726-4a6e-b95e-13af2f976f0e.png)
 
-![About Mac](https://user-images.githubusercontent.com/40514988/160290864-8ed379cf-7280-457b-b3dc-aad7e2d02551.png)
+![About Mac](https://user-images.githubusercontent.com/40514988/173263980-82b4e496-53f5-45b1-9848-98ce10ab9fc1.png)
 
 <h2>Laptop Specs</h2>
 <table>
@@ -114,14 +114,20 @@
     <tr>
       <td style="text-align: center">Name</td>
       <td style="text-align: center">Value</td>
-      <td style="text-align: center">Comment</td>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Set to Factory Mode</td>
       <td>Yes</td>
-      <td>-</td>
+    </tr>
+    <tr>
+      <td>TPM</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Fastboot</td>
+      <td>Minimal</td>
     </tr>
   </tbody>
 </table>
@@ -197,22 +203,20 @@ Internal SD card Reader
 
 ## Additional info, quirks, findings, etc 
 
-`Airportitlwm` needed to updated for monterey if you want to
-
-`BlueToolFixup` from `BrcmPatchRAM` needed for bluetooth fix in Monterey
-
 `Combojack` also needed for fix audio distortion after sleep with unplugged charger, (run install.sh)
 
 When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kext` from `VoodooPS2Controller.kext/Contents/PlugIns/`.
 
+## More Screenshoots
 
-![Hackintool](https://user-images.githubusercontent.com/40514988/160291073-3481992e-2fe9-44e2-905c-bd1f686a1b71.png)
+![Hackintool](https://user-images.githubusercontent.com/40514988/173264013-8199b888-a585-4e59-b475-0c220282270b.png)
 
-![Installed Kext](https://user-images.githubusercontent.com/40514988/160291095-eda22da2-d7a6-4e32-9550-875be80c847d.png)
+![Installed Kext](https://user-images.githubusercontent.com/40514988/173264018-1c2b2be9-a0a2-417f-939b-4a4b1c2c6047.png)
 
-![USB Mapping](https://user-images.githubusercontent.com/40514988/160291105-51e1f313-d1d3-429d-889d-20fd7098dd54.png)
+![USB Mapping](https://user-images.githubusercontent.com/40514988/173264027-78d80f57-3ca6-4b86-97ca-909a0aa213a5.png)
 
-![PCIE](https://user-images.githubusercontent.com/40514988/160291118-ef15a92c-05f9-4d1f-988d-681aa49e8ddb.png)
+![PCIE](https://user-images.githubusercontent.com/40514988/173264040-eb0220c6-3792-4b62-944b-c14fcfe39e08.png)
+
 
 ## Changelog
 
