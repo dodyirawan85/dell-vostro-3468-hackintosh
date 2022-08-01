@@ -35,7 +35,7 @@
     </tr>
     <tr>
       <td>Audio</td>
-      <td>Realtek ALC256 (layout-id: 21)</td>
+      <td>Realtek ALC256 (layout-id: 13)</td>
     </tr>
     <tr>
       <td>Wifi Card</td>
@@ -218,63 +218,82 @@ When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kex
 ![PCIE](https://user-images.githubusercontent.com/40514988/173264040-eb0220c6-3792-4b62-944b-c14fcfe39e08.png)
 
 
-## Changelog
+<details>
+  <summary><b>Changelogs</b></summary>
 
-##### 08/may/2022
-Updated and Rebuild config to OpenCore 0.8.1
+  * <details>
+      <summary><b>22 August 2022</b></summary>
 
-Updated And Cleanup Some Kext
+      1. Bring back ShowPicker
+      2. Removed CPUFriend kext
+      3. Added ALC256 ssdt and change audio layout
 
-Disabled ShowPicker and Cleanup Resources
+    </details>
 
-##### 08/may/2022
-Updated Airportitlwm to v2.2.0 - Alpha for fixing random kernel panics
+  * <details>
+      <summary><b>13 June 2022</b></summary>
 
-Updated AppleALC to 1.7.1
+      1. Updated and Rebuild config to OpenCore 0.8.1
+      2. Updated And Cleanup Some Kext
+      3. Disabled ShowPicker and Cleanup Resources
 
-##### 27/mar/2022
-Updated and Rebuild config to OpenCore 0.7.9
+    </details>
 
-Updated kext
+  * <details>
+      <summary><b>08 May 2022</b></summary>
 
-Updated ssdt
+      1. Updated Airportitlwm to v2.2.0 - Alpha for fixing random kernel panic
+      2. Updated AppleALC to 1.7.1
 
-##### 08/jan/2022:
+    </details>
 
-Updated and Rebuild config to OpenCore 0.7.6
+  * <details>
+      <summary><b>27 March 2022</b></summary>
 
-Updated kexts
+      1. Updated and Rebuild config to OpenCore 0.7.9
+      2. Updated kext
+      3. Updated ssdt
 
-Updated generated ssdt
+    </details>
 
-Added compiled and decompiled dsdt
+  * <details>
+      <summary><b>08 January 2022</b></summary>
 
-Added `-vi2c-force-polling` to bootargs for better touchpad response
+      1. Updated and Rebuild config to OpenCore 0.7.6
+      2. Updated kext
+      3. Updated generated ssdt
+      4. Added compiled and decompiled dsdt
+      5. Added `-vi2c-force-polling` to bootargs for better touchpad response
+      6. Added OpenCore Resource for gui
+      7. Drop unused kext
+      8. Fixed Audio Distortion After Sleep
 
-Added OpenCore Resource for gui
+    </details>
 
-Drop unused kext
+  * <details>
+      <summary><b>13 November 2021</b></summary>
 
-Fixed Audio Distortion After Sleep
+      1. Fixed brightness key
+      2. Added cpufriend
+      3. Change graphics AAPL,ig-platform-id (Better performance)
+      4. And more
 
-##### 13/nov/2021:
+    </details>
 
-Fixed brightness key
+  * <details>
+      <summary><b>04 November 2021</b></summary>
 
-Added cpufriend
+      1. Update to OpenCore 0.7.5
+      2. Update to Monterey
+      3. Added SSDT-HPET.aml for fixing irq conflicts
 
-Change graphics AAPL,ig-platform-id (Better performance)
+    </details>
 
-And more
+  * <details>
+      <summary><b>23 October 2021</b></summary>
 
-##### 04/nov/2021:
+      1. First Release
 
-Update to OpenCore 0.7.5
+    </details>
 
-Update to Monterey
-
-Added SSDT-HPET.aml for fixing irq conflicts
-
-##### 23/oct/2021:
-
-First Release
+</details>
